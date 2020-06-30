@@ -37,19 +37,22 @@ body {
   background: rgba(18, 137, 167, 1);
   padding: 10px 100px 10px 10px;
   margin: 5px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  color: whitesmoke;
 }
 .navBar:hover,
 .li_focused {
   background: rgba(33, 140, 116, 1);
   transform: translateX(5px) scale(1.05);
-  box-shadow: 2px 2px 5px #ffffff77;
+  box-shadow: 1px 0px 7px #ffffff77;
   cursor: pointer;
 }
 .main {
   height: 90vh;
   width: 50vw;
   background: white;
+  box-shadow: 10px 10px 10px #222;
+  border-radius:1%;
   display: flex;
   min-width: fit-content;
   transition: all 0.5s ease-in-out;
@@ -57,6 +60,8 @@ body {
 
 .home,
 .about,
+.skills,
+.portfolio,
 .contact {
   margin: auto;
 }
