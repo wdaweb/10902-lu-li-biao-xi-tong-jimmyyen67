@@ -8,29 +8,31 @@
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <title>我的電子履歷表</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/65952ca494.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
     <div id="background"></div>
     <nav id="navPanel">
         <ul id="navGroup">
-            <li class="navBar"><a href="?page=home">Home</a></li>
-            <li class="navBar"><a href="?page=about">About Me</a></li>
-            <li class="navBar"><a href="?page=skills">Skills</a></li>
-            <li class="navBar"><a href="?page=portfolio">Portfolio</a></li>
-            <li class="navBar"><a href="?page=contact">Contact</a></li>
+            <li id="li_home" class="navBar li_focused" onclick="toPageH()">Home</li>
+            <li id="li_about" class="navBar" onclick="toPageA()">About Me</li>
+            <li id="li_skills" class="navBar" onclick="toPageS()">Skills</li>
+            <li id="li_portfolio" class="navBar" onclick="toPageP()">Portfolio</li>
+            <li id="li_contact" class="navBar" onclick="toPageC()">Contact</li>
         </ul>
     </nav>
 
-    <div id="personalInfo">
-        <div class="contentLeft">
-            <div class="infoPic"></div>
-            <h1 class="mb-30">Hi, i'm <span id="name">Jimmy</span>!</h1>
-            <h3 class="mb-30">Web Designer & Developer</h3>
-            <hr class="mb-30">
-            <div id="contactBar"> tel:+886 933-486-463｜email:ichthyoid95@gmail.com</div>
-        </div>
-    </div>
+    <div id="main" class="main"></div>
+
+
+
+
+
+
+
+    <script src="./js/js.js"></script>
 </body>
 
 </html>

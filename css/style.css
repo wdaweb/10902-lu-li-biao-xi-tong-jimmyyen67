@@ -3,6 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
 #background {
   position: fixed;
   height: 100vh;
@@ -14,18 +21,9 @@
   z-index: -10;
   filter: blur(1px);
 }
-#background::after {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  background: #00000033;
-  z-index: -5;
-}
 #navPanel {
+  min-width: fit-content;
   display: inline-block;
-  position: fixed;
-  left: 10%;
-  top: 10%;
 }
 #navGroup {
   display: flex;
@@ -34,54 +32,38 @@
 }
 .navBar {
   text-align: left;
-  min-width: 7vw;
   height: fit-content;
-  display: inline-block;
   list-style: none;
   background: rgba(18, 137, 167, 1);
-  padding: 10px 10px 10px;
+  padding: 10px 100px 10px 10px;
   margin: 5px;
-
   transition: all 0.3s ease-in-out;
 }
-.navBar:hover {
+.navBar:hover,
+.li_focused {
   background: rgba(33, 140, 116, 1);
   transform: translateX(5px) scale(1.05);
   box-shadow: 2px 2px 5px #ffffff77;
   cursor: pointer;
 }
-.navBar a:link {
-  text-decoration: none;
-  color: whitesmoke;
-}
-.navBar a:active {
-  text-decoration: none;
-  color: whitesmoke;
-}
-.navBar a:hover {
-  text-decoration: none;
-  color: whitesmoke;
-}
-.navBar a:visited {
-  text-decoration: none;
-  color: whitesmoke;
+.main {
+  height: 90vh;
+  width: 50vw;
+  background: white;
+  display: flex;
+  min-width: fit-content;
+  transition: all 0.5s ease-in-out;
 }
 
-#personalInfo {
-  height: 80vh;
-  width: 30vw;
-  background: white;
-  position: fixed;
-  top: 10%;
-  left: 20%;
-  display: flex;
-}
-.contentLeft {
+.home,
+.about,
+.contact {
   margin: auto;
 }
+
 .infoPic {
   border-radius: 50%;
-  height: 270px;
+  height: 250px;
   width: 250px;
   background-image: url("../images/tom.jpg");
   background-position: center;
@@ -93,4 +75,8 @@
 #name {
   font-size: 2.5rem;
   color: rgba(0, 98, 102, 1);
+}
+
+.show {
+  transition: all 0.5s ease-in-out;
 }
