@@ -89,3 +89,8 @@ function toPageC() {
 function openLogin() {
   document.querySelector(".loginPanel").classList.toggle("show");
 }
+
+document.querySelector("#li_login").addEventListener("click", loginBurger);
+function loginBurger() {
+  document.querySelector("#loginBurger").classList.toggle("loginBurgerOP");
+}

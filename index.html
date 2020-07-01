@@ -16,8 +16,10 @@
 <body>
     <div id="background"></div>
 
+    <!-- Header -->
     <div class="header"></div>
-    
+
+    <!-- Article -->
     <div class="article">
         <nav id="navPanel">
             <ul id="navGroup">
@@ -28,18 +30,22 @@
                 <li id="li_portfolio" class="navBar" onclick="toPageP()">Portfolio</li>
                 <li id="li_contact" class="navBar" onclick="toPageC()">Contact</li>
                 <li id="li_login" class="loginBar" onclick="openLogin()"><i class="fas fa-sign-in-alt"></i> Log-in
-                    <div class="loginPanel"></div>
+                    <div id="loginBurger">
+                        <span class="loginBurgerLine"></span>
+                    </div>
+                    <!-- Login Panel -->
+                    <div class="loginPanel">
+                        <form action="" method="post" class="loginForm">
+                            <input type="text" name="acc" id="acc"><br>
+                            <input type="password" name="pwd" id="pwd"><br>
+                            <input type="submit" value="登入">
+                        </form>
+                    </div>
                 </li>
             </ul>
         </nav>
-
         <div id="main" class="main"></div>
-
     </div>
-
-
-
-
     <script src="./js/js.js"></script>
 </body>
 

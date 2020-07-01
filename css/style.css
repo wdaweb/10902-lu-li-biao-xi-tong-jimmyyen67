@@ -13,13 +13,11 @@ body {
   font-family: "Noto Sans TC", sans-serif;
 }
 .header {
-  position: relative;
-  top: 0%;
-  height: 20px;
+  height: 50px;
   width: 100vw;
 }
-.article{
-display: flex;
+.article {
+  display: flex;
 }
 .tcent {
   text-align: center;
@@ -51,26 +49,13 @@ display: flex;
   height: fit-content;
   list-style: none;
   background: rgba(255, 255, 255, 1);
-  padding: 10px 100px 10px 10px;
+  padding: 10px 10px 10px 10px;
   margin: 5px;
   transition: all 0.1s ease-in-out;
   color: #2c3e50;
   font-family: "Ubuntu", sans-serif;
 }
-.loginBar {
-  text-align: left;
-  height: fit-content;
-  list-style: none;
-  background: rgba(255, 255, 255, 1);
-  padding: 10px 100px 10px 10px;
-  margin: 5px;
-  transition: all 0.1s ease-in-out;
-  color: #2c3e50;
-  font-family: "Ubuntu", sans-serif;
-}
-.loginBar:hover {
-  cursor: pointer;
-}
+
 .navBar:hover,
 .li_focused {
   box-shadow: 2px 2px 3px #2c3e50;
@@ -118,8 +103,87 @@ display: flex;
   height: 100px !important;
   transition: all 0.5s ease-in-out;
 }
+
+/* <--登入區塊-> */
+/* <--登入區塊-> */
+.loginBar {
+  position: relative;
+  text-align: left;
+  height: fit-content;
+  list-style: none;
+  background: rgba(255, 255, 255, 1);
+  padding: 10px 10px 10px 10px;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+  color: #2c3e50;
+  font-family: "Ubuntu", sans-serif;
+  overflow: hidden;
+}
+.loginBar:hover {
+  cursor: pointer;
+}
 .loginPanel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 0px;
   background: white;
   transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+#loginBurger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 30px;
+  width: 30px;
+  border-radius: 15%;
+  border: 2px solid #00000088;
+  transition: all 0.3s ease-in-out;
+}
+.loginBurgerLine {
+  height: 3px;
+  width: 20px;
+  background: #00000088;
+  transition: all 0.3s ease-in-out;
+}
+.loginBurgerLine::before,
+.loginBurgerLine::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 20px;
+  background: #00000088;
+  transition: all 0.3s ease-in-out;
+}
+.loginBurgerLine::before {
+  transform: translatey(6px);
+}
+.loginBurgerLine::after {
+  transform: translatey(-6px);
+}
+.loginBurgerOP {
+  top: 23% !important;
+  border: none !important;
+}
+.loginBurgerOP .loginBurgerLine {
+  background: transparent !important;
+}
+.loginBurgerOP .loginBurgerLine::before {
+  transform: rotate(45deg);
+  background: #000000;
+}
+.loginBurgerOP .loginBurgerLine::after {
+  background: #000000;
+  transform: rotate(-45deg);
+}
+.loginForm input {
+  border: 1px solid #000;
+  border-radius: 10%;
+  margin-top: 10px;
 }
