@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <title>我的電子履歷表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/65952ca494.js" crossorigin="anonymous"></script>
     <script src="./js/jquery-3.5.1.min.js"></script>
@@ -14,20 +15,27 @@
 
 <body>
     <div id="background"></div>
-    <nav id="navPanel">
-        <ul id="navGroup">
-            <li id="li_home" class="navBar li_focused" onclick="toPageH()">Home</li>
-            <li id="li_about" class="navBar" onclick="toPageA()">About Me</li>
-            <li id="li_skills" class="navBar" onclick="toPageS()">Skills</li>
-            <li id="li_portfolio" class="navBar" onclick="toPageP()">Portfolio</li>
-            <li id="li_contact" class="navBar" onclick="toPageC()">Contact</li>
-        </ul>
-    </nav>
 
-    <div id="main" class="main"></div>
+    <div class="header"></div>
+    
+    <div class="article">
+        <nav id="navPanel">
+            <ul id="navGroup">
+                <li id="li_home" class="navBar li_focused" onclick="toPageH()">Home</li>
+                <li id="li_about" class="navBar" onclick="toPageA()">About Me</li>
+                <li id="li_experience" class="navBar" onclick="toPageE()">Experience</li>
+                <li id="li_skills" class="navBar" onclick="toPageS()">Skills</li>
+                <li id="li_portfolio" class="navBar" onclick="toPageP()">Portfolio</li>
+                <li id="li_contact" class="navBar" onclick="toPageC()">Contact</li>
+                <li id="li_login" class="loginBar" onclick="openLogin()"><i class="fas fa-sign-in-alt"></i> Log-in
+                    <div class="loginPanel"></div>
+                </li>
+            </ul>
+        </nav>
 
+        <div id="main" class="main"></div>
 
-
+    </div>
 
 
 

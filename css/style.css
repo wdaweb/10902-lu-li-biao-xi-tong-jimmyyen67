@@ -5,21 +5,37 @@
 }
 body {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
+  font-family: "Noto Sans TC", sans-serif;
+}
+.header {
+  position: relative;
+  top: 0%;
+  height: 20px;
+  width: 100vw;
+}
+.article{
+display: flex;
+}
+.tcent {
+  text-align: center;
+}
+.tright {
+  text-align: right;
 }
 #background {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background-image: url("../images/backimg.jpg");
+  background: url("../images/backimg.jpg");
   background-repeat: repeat;
   background-size: cover;
   background-attachment: fixed;
-  z-index: -10;
-  filter: blur(1px);
+  z-index: -1;
 }
 #navPanel {
   min-width: fit-content;
@@ -34,25 +50,41 @@ body {
   text-align: left;
   height: fit-content;
   list-style: none;
-  background: rgba(18, 137, 167, 1);
+  background: rgba(255, 255, 255, 1);
   padding: 10px 100px 10px 10px;
   margin: 5px;
   transition: all 0.1s ease-in-out;
-  color: whitesmoke;
+  color: #2c3e50;
+  font-family: "Ubuntu", sans-serif;
+}
+.loginBar {
+  text-align: left;
+  height: fit-content;
+  list-style: none;
+  background: rgba(255, 255, 255, 1);
+  padding: 10px 100px 10px 10px;
+  margin: 5px;
+  transition: all 0.1s ease-in-out;
+  color: #2c3e50;
+  font-family: "Ubuntu", sans-serif;
+}
+.loginBar:hover {
+  cursor: pointer;
 }
 .navBar:hover,
 .li_focused {
-  background: rgba(33, 140, 116, 1);
+  box-shadow: 2px 2px 3px #2c3e50;
   transform: translateX(5px) scale(1.05);
-  box-shadow: 1px 0px 7px #ffffff77;
   cursor: pointer;
+  font-weight: bold;
 }
 .main {
   height: 90vh;
   width: 50vw;
   background: white;
-  box-shadow: 10px 10px 10px #222;
-  border-radius:1%;
+  box-shadow: 5px 5px 10px #222;
+  border: 1px solid rgab(0, 0, 0, 0.5);
+  border-radius: 1%;
   display: flex;
   min-width: fit-content;
   transition: all 0.5s ease-in-out;
@@ -60,6 +92,7 @@ body {
 
 .home,
 .about,
+.experience,
 .skills,
 .portfolio,
 .contact {
@@ -81,7 +114,12 @@ body {
   font-size: 2.5rem;
   color: rgba(0, 98, 102, 1);
 }
-
 .show {
+  height: 100px !important;
+  transition: all 0.5s ease-in-out;
+}
+.loginPanel {
+  height: 0px;
+  background: white;
   transition: all 0.5s ease-in-out;
 }
