@@ -3,12 +3,12 @@ var li_about = document.querySelector("#li_about");
 var li_skills = document.querySelector("#li_skills");
 var li_portfolio = document.querySelector("#li_portfolio");
 var li_contact = document.querySelector("#li_contact");
-li_login.classList.remove("li_focused");
+var li_login = document.querySelector("#li_login");
 var main = document.querySelector("#main");
 
 toPageH();
 function toPageH() {
-  $.get("../frontend/home.html", {}, function (res) {
+  $.get("../frontend/home.php", {}, function (res) {
     li_home.classList.add("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
@@ -21,7 +21,7 @@ function toPageH() {
   });
 }
 function toPageA() {
-  $.get("../frontend/about.html", {}, function (res) {
+  $.get("../frontend/about.php", {}, function (res) {
     li_home.classList.remove("li_focused");
     li_about.classList.add("li_focused");
     li_experience.classList.remove("li_focused");
@@ -34,7 +34,7 @@ function toPageA() {
   });
 }
 function toPageE() {
-  $.get("../frontend/experience.html", {}, function (res) {
+  $.get("../frontend/experience.php", {}, function (res) {
     li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.add("li_focused");
@@ -47,7 +47,7 @@ function toPageE() {
   });
 }
 function toPageS() {
-  $.get("../frontend/skills.html", {}, function (res) {
+  $.get("../frontend/skills.php", {}, function (res) {
     li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
@@ -60,7 +60,7 @@ function toPageS() {
   });
 }
 function toPageP() {
-  $.get("../frontend/portfolio.html", {}, function (res) {
+  $.get("../frontend/portfolio.php", {}, function (res) {
     li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
@@ -74,7 +74,7 @@ function toPageP() {
 }
 
 function toPageC() {
-  $.get("../frontend/contact.html", {}, function (res) {
+  $.get("../frontend/contact.php", {}, function (res) {
     li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
@@ -86,10 +86,16 @@ function toPageC() {
     console.log(res);
   });
 }
+
+loginBar();
+function loginBar() {
+  $.get("../frontend/login.php", {}, function (res) {
+    li_login.innerHTML = res;
+    console.log(res);
+  });
+}
+// 漢堡按鈕及登入頁面的展開
 function openLogin() {
   document.querySelector(".loginPanel").classList.toggle("show");
-}
-document.querySelector("#loginBurger").addEventListener("click", loginBurger);
-function loginBurger() {
   document.querySelector("#loginBurger").classList.toggle("loginBurgerOP");
 }

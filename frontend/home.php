@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
   <div class="home">
     <div id="infoPic" class="infoPic"></div>
     <h1 id="nameh1" class="mb-30 tcent">Hi, i'm <span id="name" class="name">Jimmy</span>!</h1>
@@ -16,6 +7,3 @@
     <hr class="mb-30 tcent">
     <p>Welcome to my personal website.</p>
   </div>
-</body>
-
-</html>

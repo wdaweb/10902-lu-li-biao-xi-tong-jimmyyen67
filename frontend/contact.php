@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
   <div class="contact">
     <h1>Contact Information</h1>
     <p><i class="fas fa-envelope-open-text"></i><span>　ichthyoid95＠gmail.com</span></p>
     <p><i class="fas fa-mobile-alt"></i><span>　+886 933-486-463</span></p>
   </div>
-</body>
-
-</html>
