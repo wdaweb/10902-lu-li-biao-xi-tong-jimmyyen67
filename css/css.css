@@ -55,7 +55,6 @@ body {
   color: #2c3e50;
   font-family: "Ubuntu", sans-serif;
 }
-
 .navBar:hover,
 .li_focused {
   box-shadow: 2px 2px 3px #2c3e50;
@@ -74,7 +73,6 @@ body {
   min-width: fit-content;
   transition: all 0.5s ease-in-out;
 }
-
 .home,
 .about,
 .experience,
@@ -83,7 +81,6 @@ body {
 .contact {
   margin: auto;
 }
-
 .infoPic {
   border-radius: 50%;
   height: 250px;
@@ -92,16 +89,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-.mb-30 {
-  margin-bottom: 20px;
-}
 #name {
   font-size: 2.5rem;
   color: rgba(0, 98, 102, 1);
-}
-.show {
-  height: 100px !important;
-  /* transition: all 0.3s ease-in-out; */
 }
 
 /* <--登入區塊-> */
@@ -114,22 +104,20 @@ body {
   background: rgba(255, 255, 255, 1);
   padding: 10px 10px 10px 10px;
   margin: 5px;
-  /* transition: all 0.3s ease-in-out; */
   color: #2c3e50;
   font-family: "Ubuntu", sans-serif;
   overflow: hidden;
 }
-.loginBar:hover {
-  cursor: pointer;
-}
 .loginPanel {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 0px;
-  background: white;
-  /* transition: all 0.5s ease-in-out; */
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.show {
+  height: 110px !important;
 }
 #loginBurger {
   display: flex;
@@ -137,19 +125,18 @@ body {
   align-items: center;
   position: absolute;
   right: 3%;
-  top: 50%;
-  transform: translate(0, -50%);
+  top: 4px;
   height: 30px;
   width: 30px;
   border-radius: 15%;
   border: 2px solid #00000088;
-  /* transition: all 0.3s ease-in-out; */
+  cursor: pointer;
 }
 .loginBurgerLine {
   height: 3px;
   width: 20px;
   background: #00000088;
-  /* transition: all 0.3s ease-in-out; */
+  transition: all 0.3s ease-in-out;
 }
 .loginBurgerLine::before,
 .loginBurgerLine::after {
@@ -158,7 +145,7 @@ body {
   height: 3px;
   width: 20px;
   background: #00000088;
-  /* transition: all 0.3s ease-in-out; */
+  transition: all 0.3s ease-in-out;
 }
 .loginBurgerLine::before {
   transform: translatey(6px);
@@ -167,7 +154,6 @@ body {
   transform: translatey(-6px);
 }
 .loginBurgerOP {
-  top: 15% !important;
   border: none !important;
 }
 .loginBurgerOP .loginBurgerLine {
@@ -181,8 +167,33 @@ body {
   background: #000000;
   transform: rotate(-45deg);
 }
-.loginForm input {
-  border: 1px solid #000;
-  border-radius: 10%;
-  margin-top: 10px;
+.loginInput {
+  border-bottom: 2px solid #000;
+}
+.loginIcon {
+  display: inline-block;
+}
+.loginForm input[type="text"],
+.loginForm input[type="password"] {
+  outline: none;
+  border-style: none;
+  width: 9rem;
+  height: 1.5rem;
+  padding-left: 0.5rem;
+}
+.loginForm input[type="submit"] {
+  padding: 3px 10px 3px 10px;
+  border: 1.5px solid #3d3d3d;
+  background: transparent;
+  outline: none;
+  font-weight: bold;
+  color: #3d3d3d;
+  transition: all .3s ease-in-out;
+}
+.loginForm input[type="submit"]:hover,
+.loginForm input[type="submit"]:focus {
+  background: #3d3d3d;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
 }

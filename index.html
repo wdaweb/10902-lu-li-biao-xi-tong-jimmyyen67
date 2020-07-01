@@ -8,7 +8,8 @@
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <title>我的電子履歷表</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Ubuntu&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/oocss.css">
     <script src="https://kit.fontawesome.com/65952ca494.js" crossorigin="anonymous"></script>
     <script src="./js/jquery-3.5.1.min.js"></script>
 </head>
@@ -29,16 +30,23 @@
                 <li id="li_skills" class="navBar" onclick="toPageS()">Skills</li>
                 <li id="li_portfolio" class="navBar" onclick="toPageP()">Portfolio</li>
                 <li id="li_contact" class="navBar" onclick="toPageC()">Contact</li>
-                <li id="li_login" class="loginBar" ><i class="fas fa-sign-in-alt"></i> Log-in
+                <li id="li_login" class="loginBar"><i class="fas fa-sign-in-alt"></i> Log-in
                     <div id="loginBurger" onclick="openLogin()">
                         <span class="loginBurgerLine"></span>
                     </div>
                     <!-- Login Panel -->
                     <div class="loginPanel">
                         <form action="" method="post" class="loginForm">
-                            <input type="text" name="acc" id="acc"><br>
-                            <input type="password" name="pwd" id="pwd"><br>
-                            <input type="submit" value="登入">
+                            <div class="loginInput mt-10"><span class="loginIcon"><i
+                                        class="fas fa-user-alt"></i></span><input type="text" name="acc" id="acc"
+                                    placeholder="Account"><br>
+                            </div>
+                            <div class="loginInput mt-10"><span class="loginIcon"><i
+                                        class="fas fa-lock"></i></span><input type="password" name="pwd" id="pwd"
+                                    placeholder="Password"><br>
+                            </div>
+                            <input type="submit" class="mt-10" value="登入">
+                            <a href="" type="button" class="">5566</a>
                         </form>
                     </div>
                 </li>
