@@ -8,7 +8,7 @@ var main = document.querySelector("#main");
 
 toPageH();
 function toPageH() {
-  $.get("../frontend/home.php", {}, function (res) {
+  $.get("./frontend/home.html", {}, function (res) {
     li_home.classList.add("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
@@ -21,7 +21,7 @@ function toPageH() {
   });
 }
 function toPageA() {
-  $.get("../frontend/about.php", {}, function (res) {
+  $.get("./frontend/about.html", {}, function (res) {
     li_home.classList.remove("li_focused");
     li_about.classList.add("li_focused");
     li_experience.classList.remove("li_focused");
@@ -34,7 +34,7 @@ function toPageA() {
   });
 }
 function toPageE() {
-  $.get("../frontend/experience.php", {}, function (res) {
+  $.get("./frontend/experience.html", {}, function (res) {
     li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.add("li_focused");
@@ -47,7 +47,7 @@ function toPageE() {
   });
 }
 function toPageS() {
-  $.get("../frontend/skills.php", {}, function (res) {
+  $.get("./frontend/skills.html", {}, function (res) {
     li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
@@ -60,7 +60,7 @@ function toPageS() {
   });
 }
 function toPageP() {
-  $.get("../frontend/portfolio.php", {}, function (res) {
+  $.get("./frontend/portfolio.html", {}, function (res) {
     li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
@@ -74,7 +74,7 @@ function toPageP() {
 }
 
 function toPageC() {
-  $.get("../frontend/contact.php", {}, function (res) {
+  $.get("./frontend/contact.html", {}, function (res) {
     li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
@@ -89,9 +89,10 @@ function toPageC() {
 
 loginBar();
 function loginBar() {
-  $.get("../frontend/login.php", {}, function (res) {
-    li_login.innerHTML = res;
-    console.log(res);
+  $.get("./frontend/loginBar.html", {}, function (res) {
+    $.get("./frontend/loginBar.php", { res }, function (display) {
+      li_login.innerHTML = display;
+    })
   });
 }
 // 漢堡按鈕及登入頁面的展開
