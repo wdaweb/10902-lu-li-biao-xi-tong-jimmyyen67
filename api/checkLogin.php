@@ -15,11 +15,12 @@ $acc = $_POST['acc'];
 $pwd = $_POST['pwd'];
 $sql = "SELECT * FROM user where `acc`= '$acc' && `pwd`='$pwd'";
 $user = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
+
 if ($user) {
   // echo "1"; 測試讀取帳號成功
   $_SESSION['login'] = 1;
   echo $_SESSION['login'];
-  // header("location:../index.html");
+  header("location:../index.html");
 } else {
   // echo "0"; 測試讀取帳號失敗
 }

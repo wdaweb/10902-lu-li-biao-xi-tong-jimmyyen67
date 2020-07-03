@@ -29,7 +29,9 @@ function toPageA() {
     li_portfolio.classList.remove("li_focused")
     li_contact.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
-    main.innerHTML = res;
+    $.get("./frontend/about.php", { res }, function (display) {
+      main.innerHTML = display;
+    })
     console.log(res);
   });
 }
@@ -42,7 +44,9 @@ function toPageE() {
     li_portfolio.classList.remove("li_focused")
     li_contact.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
-    main.innerHTML = res;
+    $.get("./frontend/experience.php", { res }, function (display) {
+      main.innerHTML = display;
+    })
     console.log(res);
   });
 }
@@ -55,7 +59,9 @@ function toPageS() {
     li_portfolio.classList.remove("li_focused")
     li_contact.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
-    main.innerHTML = res;
+    $.get("./frontend/skills.php", { res }, function (display) {
+      main.innerHTML = display;
+    })
     console.log(res);
   });
 }
@@ -68,7 +74,9 @@ function toPageP() {
     li_portfolio.classList.add("li_focused")
     li_contact.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
-    main.innerHTML = res;
+    $.get("./frontend/portfolio.php", { res }, function (display) {
+      main.innerHTML = display;
+    })
     console.log(res);
   });
 }
@@ -82,7 +90,9 @@ function toPageC() {
     li_portfolio.classList.remove("li_focused")
     li_contact.classList.add("li_focused");
     li_login.classList.remove("li_focused");
-    main.innerHTML = res;
+    $.get("./frontend/contact.php", { res }, function (display) {
+      main.innerHTML = display;
+    })
     console.log(res);
   });
 }
