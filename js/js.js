@@ -12,8 +12,8 @@ function toPageH() {
     li_home.classList.add("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
-    li_skills.classList.remove("li_focused")
-    li_portfolio.classList.remove("li_focused")
+    li_skills.classList.remove("li_focused");
+    li_portfolio.classList.remove("li_focused");
     li_contact.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
     main.innerHTML = res;
@@ -25,13 +25,13 @@ function toPageA() {
     li_home.classList.remove("li_focused");
     li_about.classList.add("li_focused");
     li_experience.classList.remove("li_focused");
-    li_skills.classList.remove("li_focused")
-    li_portfolio.classList.remove("li_focused")
+    li_skills.classList.remove("li_focused");
+    li_portfolio.classList.remove("li_focused");
     li_contact.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
     $.get("./frontend/about.php", { res }, function (display) {
       main.innerHTML = display;
-    })
+    });
     console.log(res);
   });
 }
@@ -40,13 +40,13 @@ function toPageE() {
     li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.add("li_focused");
-    li_skills.classList.remove("li_focused")
-    li_portfolio.classList.remove("li_focused")
+    li_skills.classList.remove("li_focused");
+    li_portfolio.classList.remove("li_focused");
     li_contact.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
     $.get("./frontend/experience.php", { res }, function (display) {
       main.innerHTML = display;
-    })
+    });
     console.log(res);
   });
 }
@@ -55,13 +55,13 @@ function toPageS() {
     li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
-    li_skills.classList.add("li_focused")
-    li_portfolio.classList.remove("li_focused")
+    li_skills.classList.add("li_focused");
+    li_portfolio.classList.remove("li_focused");
     li_contact.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
     $.get("./frontend/skills.php", { res }, function (display) {
       main.innerHTML = display;
-    })
+    });
     console.log(res);
   });
 }
@@ -70,13 +70,13 @@ function toPageP() {
     li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
-    li_skills.classList.remove("li_focused")
-    li_portfolio.classList.add("li_focused")
+    li_skills.classList.remove("li_focused");
+    li_portfolio.classList.add("li_focused");
     li_contact.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
     $.get("./frontend/portfolio.php", { res }, function (display) {
       main.innerHTML = display;
-    })
+    });
     console.log(res);
   });
 }
@@ -86,13 +86,13 @@ function toPageC() {
     li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
-    li_skills.classList.remove("li_focused")
-    li_portfolio.classList.remove("li_focused")
+    li_skills.classList.remove("li_focused");
+    li_portfolio.classList.remove("li_focused");
     li_contact.classList.add("li_focused");
     li_login.classList.remove("li_focused");
     $.get("./frontend/contact.php", { res }, function (display) {
       main.innerHTML = display;
-    })
+    });
     console.log(res);
   });
 }
@@ -102,11 +102,16 @@ function loginBar() {
   $.get("./frontend/loginBar.html", {}, function (res) {
     $.get("./frontend/loginBar.php", { res }, function (display) {
       li_login.innerHTML = display;
-    })
+    });
   });
 }
 // 漢堡按鈕及登入頁面的展開
 function openLogin() {
   document.querySelector(".loginPanel").classList.toggle("show");
   document.querySelector("#loginBurger").classList.toggle("loginBurgerOP");
+}
+
+//編輯頁面開啟或關閉
+function editOn() {
+  $("#pageFront").toggleClass("pageOff");
 }
