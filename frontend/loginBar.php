@@ -2,7 +2,7 @@
 SESSION_START();
 if (empty($_SESSION['login'])) {
 ?>
-  <i class="fas fa-sign-in-alt"></i> Log-in
+  <div class="loginBarText"><i class="fas fa-sign-in-alt"></i> Log-in</div>
   <div id="loginBurger" onclick="openLogin()">
     <span class="loginBurgerLine"></span>
   </div>
@@ -19,13 +19,16 @@ if (empty($_SESSION['login'])) {
 <?php
 } else {
 ?>
-  <i class="fas fa-sign-in-alt"></i> Logged-in
+  <div class="loginBarText"><p>Edit</p></div>
   <div id="loginBurger" onclick="openLogin()">
     <span class="loginBurgerLine"></span>
   </div>
   <!-- Login Panel -->
   <div class="loginPanel">
-<button onclick="editOn()">後台管理</button>
+    <div>
+      <button onclick="editOn()">後台管理頁</button><br>
+      <button onclick="logout()">使用者登出</button>
+    </div>
   </div>
 <?php
 }

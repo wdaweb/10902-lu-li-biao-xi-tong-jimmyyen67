@@ -8,6 +8,6 @@
     <title>履歷表後台管理</title>
 </head>
 <body>
-<h1>履歷表管理後台</h1>
+<button id="toPageFront" class="toPageFront" onclick="editOff()">Back to Front</button>
 </body>
 </html>

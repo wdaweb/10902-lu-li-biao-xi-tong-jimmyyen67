@@ -5,6 +5,7 @@ var li_portfolio = document.querySelector("#li_portfolio");
 var li_contact = document.querySelector("#li_contact");
 var li_login = document.querySelector("#li_login");
 var main = document.querySelector("#main");
+var pageBack = document.querySelector("#pageBack");
 
 toPageH();
 function toPageH() {
@@ -17,7 +18,6 @@ function toPageH() {
     li_contact.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
     main.innerHTML = res;
-    console.log(res);
   });
 }
 function toPageA() {
@@ -32,7 +32,6 @@ function toPageA() {
     $.get("./frontend/about.php", { res }, function (display) {
       main.innerHTML = display;
     });
-    console.log(res);
   });
 }
 function toPageE() {
@@ -47,7 +46,6 @@ function toPageE() {
     $.get("./frontend/experience.php", { res }, function (display) {
       main.innerHTML = display;
     });
-    console.log(res);
   });
 }
 function toPageS() {
@@ -62,7 +60,6 @@ function toPageS() {
     $.get("./frontend/skills.php", { res }, function (display) {
       main.innerHTML = display;
     });
-    console.log(res);
   });
 }
 function toPageP() {
@@ -77,7 +74,6 @@ function toPageP() {
     $.get("./frontend/portfolio.php", { res }, function (display) {
       main.innerHTML = display;
     });
-    console.log(res);
   });
 }
 
@@ -93,7 +89,6 @@ function toPageC() {
     $.get("./frontend/contact.php", { res }, function (display) {
       main.innerHTML = display;
     });
-    console.log(res);
   });
 }
 
@@ -105,6 +100,11 @@ function loginBar() {
     });
   });
 }
+function logout() {
+  $.get("api/checkLogin.php", {}, function (res) {
+    history.go(0);
+  });
+}
 // 漢堡按鈕及登入頁面的展開
 function openLogin() {
   document.querySelector(".loginPanel").classList.toggle("show");
@@ -113,5 +113,14 @@ function openLogin() {
 
 //編輯頁面開啟或關閉
 function editOn() {
-  $("#pageFront").toggleClass("pageOff");
+  $("#pageFront").toggleClass("pageFrontToggle");
+  $("#pageBack").toggleClass("pageBackToggle");
+  toPageBack();
+}
+function toPageBack() {
+  $.get("./backend/admin.html", {}, function (res) {
+    $.get("./backend/admin.php", { res }, function (display) {
+      pageBack.innerHTML = display;
+    });
+  });
 }
