@@ -55,3 +55,13 @@
   min-width: fit-content;
   transition: all 0.5s ease-in-out;
 }
+
+/* 後台：作品集 */
+.addP {
+  background: deeppink;
+}
+.addP fieldset {
+  height: 90vh;
+  width: fit-content;
+  margin: auto;
+}

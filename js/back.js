@@ -66,3 +66,29 @@ function toBackC() {
     });
   });
 }
+
+// 作品集 新增
+$("#addPSwitch").click(function () {
+  $("#addP").slideToggle();
+});
+
+$(document).ready(function (e) {
+  $("#uploadForm").on("submit", function (e) {
+    e.preventDefault();
+    $.ajax({
+      url: "api/addPortfolio.php",
+      type: "POST",
+      data: new FormData(this),
+      contentType: false,
+      cache: false,
+      processData: false,
+      success: function (data) {
+        toBackP();
+      },
+      error: function (e) {
+        alert("Insert Failed");
+        toBackP();
+      },
+    });
+  });
+});
