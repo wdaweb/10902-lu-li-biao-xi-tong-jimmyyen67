@@ -25,14 +25,15 @@ $Ps = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
       </tr>
       <?php
       foreach ($Ps as $P) {
+        $checked = ($P['sh'] == 1) ? 'checked' : '';
       ?>
         <tr>
-          <td><img src="images/<?= $P['img'] ?>" alt="" height="100px" width="100px" style="border:2px solid #000"></td>
+          <td><img src="images/<?= $P['img'] ?>" alt="" height="50px" width="50px" style="border:3px solid #000"></td>
           <td><?= $P['title'] ?></td>
           <td><?= $P['url'] ?></td>
           <td><?= $P['note1'] ?><br><?= $P['note2'] ?><br><?= $P['note3'] ?></td>
-          <td><input type="radio" name="sh"></td>
-          <td><input type="checkbox" name="del"></td>
+          <td><input type="checkbox" name="sh[]" value="<?$P['id']?>" <?= $checked ?>></td>
+          <td><input type="checkbox" name="del[]"></td>
         </tr>
       <?php
       }
