@@ -22,7 +22,7 @@ if (empty($_SESSION['login'])) {
   <div class="loginBarText">
     <p>Log-out</p>
   </div>
-  <div id="loginBurger" onclick="logout()">
+  <div id="loginBurger" class="noborder" onclick="logout()">
     <span><i class="fas fa-sign-out-alt"></i></span>
   </div>
   <button id="editOn" onclick="editSwitch()" class="editOn">Back Stage</button>

@@ -16,7 +16,6 @@ function toPageH() {
     li_skills.classList.remove("li_focused");
     li_portfolio.classList.remove("li_focused");
     li_contact.classList.remove("li_focused");
-    li_login.classList.remove("li_focused");
     main.innerHTML = res;
   });
 }
@@ -116,6 +115,7 @@ function editSwitch() {
   $("#pageFront").toggleClass("pageFrontToggle");
   $("#pageBack").toggleClass("pageBackToggle");
   toPageBack();
+  $.getScript("js/back.js");
 }
 function toPageBack() {
   $.get("./backend/admin.html", {}, function (res) {

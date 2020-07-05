@@ -15,20 +15,20 @@
         <div class="backList">
             <nav id="backNavPanel">
                 <ul id="navGroup">
-                    <li class="backNavBar" onclick="toPageBackH()">Home</li>
-                    <li class="backNavBar" onclick="toPageBackA()">About Me</li>
-                    <li class="backNavBar" onclick="toPageBackE()">Experience</li>
-                    <li class="backNavBar" onclick="toPageBackS()">Skills</li>
-                    <li class="backNavBar" onclick="toPageBackP()">Portfolio</li>
-                    <li class="backNavBar" onclick="toPageBackC()">Contact</li>
+                    <li id="back_about" class="backNavBar" onclick="toBackA()">About Me</li>
+                    <li id="back_experience" class="backNavBar" onclick="toBackE()">Experience</li>
+                    <li id="back_skills" class="backNavBar" onclick="toBackS()">Skills</li>
+                    <li id="back_portfolio" class="backNavBar" onclick="toBackP()">Portfolio</li>
+                    <li id="back_contact" class="backNavBar" onclick="toBackC()">Contact</li>
                 </ul>
             </nav>
         </div>
 
-        <div class="backMain">
+        <div id="backMain" class="backMain">
 
         </div>
     </div>
+    <script src="js/back.js"></script>
 </body>
 
 </html>

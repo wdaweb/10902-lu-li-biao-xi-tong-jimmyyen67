@@ -37,7 +37,8 @@
   color: #dfe6e9;
   font-family: "Ubuntu", sans-serif;
 }
-.backNavBar:hover {
+.backNavBar:hover,
+.back_focused {
   box-shadow: 2px 2px 3px #2c3e50;
   transform: translateX(5px) scale(1.05);
   cursor: pointer;
