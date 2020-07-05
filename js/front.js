@@ -9,6 +9,7 @@ var pageBack = document.querySelector("#pageBack");
 
 toPageH();
 function toPageH() {
+  $.getScript("js/back.js");
   $.get("./frontend/home.html", {}, function (res) {
     li_home.classList.add("li_focused");
     li_about.classList.remove("li_focused");
@@ -114,13 +115,14 @@ function openLogin() {
 function editSwitch() {
   $("#pageFront").toggleClass("pageFrontToggle");
   $("#pageBack").toggleClass("pageBackToggle");
-  toPageBack();
-  $.getScript("js/back.js");
+    $.getScript("js/back.js");
+  // toPageBack();
 }
-function toPageBack() {
-  $.get("./backend/admin.html", {}, function (res) {
-    $.get("./backend/admin.php", { res }, function (display) {
-      pageBack.innerHTML = display;
-    });
-  });
-}
+// function toPageBack() {
+//   $.get("./backend/admin.html", {}, function (res) {
+//     $.get("./backend/admin.php", { res }, function (display) {
+//       pageBack.innerHTML = display;
+//     });
+//   });
+//   $.getScript("js/back.js");
+// }

@@ -24,9 +24,7 @@
             </nav>
         </div>
 
-        <div id="backMain" class="backMain">
-
-        </div>
+        <div id="backMain" class="backMain"></div>
     </div>
     <script src="js/back.js"></script>
 </body>
