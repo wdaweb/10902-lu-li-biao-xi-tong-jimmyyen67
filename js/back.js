@@ -67,11 +67,11 @@ function toBackC() {
   });
 }
 
+
 // 作品集 新增
 $("#addPSwitch").click(function () {
   $("#addP").slideToggle();
 });
-
 $(document).ready(function (e) {
   $("#uploadForm").on("submit", function (e) {
     e.preventDefault();

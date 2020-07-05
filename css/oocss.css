@@ -16,3 +16,15 @@
 .tright {
   text-align: right;
 }
+.d-flex{
+  display:flex;
+}
+.j-center{
+  justify-content: center;
+}
+.a-center{
+  align-items: center;
+}
+.t-center{
+  text-align: center;
+}

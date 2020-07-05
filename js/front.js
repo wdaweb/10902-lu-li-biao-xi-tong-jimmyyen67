@@ -7,22 +7,11 @@ var li_login = document.querySelector("#li_login");
 var main = document.querySelector("#main");
 var pageBack = document.querySelector("#pageBack");
 
-toPageH();
-function toPageH() {
-  $.getScript("js/back.js");
-  $.get("./frontend/home.html", {}, function (res) {
-    li_home.classList.add("li_focused");
-    li_about.classList.remove("li_focused");
-    li_experience.classList.remove("li_focused");
-    li_skills.classList.remove("li_focused");
-    li_portfolio.classList.remove("li_focused");
-    li_contact.classList.remove("li_focused");
-    main.innerHTML = res;
-  });
-}
+$.getScript("js/back.js");
+
+window.onload = toPageA();
 function toPageA() {
   $.get("./frontend/about.html", {}, function (res) {
-    li_home.classList.remove("li_focused");
     li_about.classList.add("li_focused");
     li_experience.classList.remove("li_focused");
     li_skills.classList.remove("li_focused");
@@ -36,7 +25,6 @@ function toPageA() {
 }
 function toPageE() {
   $.get("./frontend/experience.html", {}, function (res) {
-    li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.add("li_focused");
     li_skills.classList.remove("li_focused");
@@ -50,7 +38,6 @@ function toPageE() {
 }
 function toPageS() {
   $.get("./frontend/skills.html", {}, function (res) {
-    li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
     li_skills.classList.add("li_focused");
@@ -64,7 +51,6 @@ function toPageS() {
 }
 function toPageP() {
   $.get("./frontend/portfolio.html", {}, function (res) {
-    li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
     li_skills.classList.remove("li_focused");
@@ -79,7 +65,6 @@ function toPageP() {
 
 function toPageC() {
   $.get("./frontend/contact.html", {}, function (res) {
-    li_home.classList.remove("li_focused");
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
     li_skills.classList.remove("li_focused");
@@ -115,7 +100,8 @@ function openLogin() {
 function editSwitch() {
   $("#pageFront").toggleClass("pageFrontToggle");
   $("#pageBack").toggleClass("pageBackToggle");
-    $.getScript("js/back.js");
+  $("#addP").style.display = "none";
+  $.getScript("js/back.js");
   // toPageBack();
 }
 // function toPageBack() {
