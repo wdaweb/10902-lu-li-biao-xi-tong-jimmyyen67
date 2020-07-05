@@ -19,17 +19,13 @@ if (empty($_SESSION['login'])) {
 <?php
 } else {
 ?>
-  <div class="loginBarText"><p>Edit</p></div>
-  <div id="loginBurger" onclick="openLogin()">
-    <span class="loginBurgerLine"></span>
+  <div class="loginBarText">
+    <p>Log-out</p>
   </div>
-  <!-- Login Panel -->
-  <div class="loginPanel">
-    <div>
-      <button onclick="editOn()">後台管理頁</button><br>
-      <button onclick="logout()">使用者登出</button>
-    </div>
+  <div id="loginBurger" onclick="logout()">
+    <span><i class="fas fa-sign-out-alt"></i></span>
   </div>
+  <button id="editOn" onclick="editSwitch()" class="editOn">Back Stage</button>
 <?php
 }
 ?>

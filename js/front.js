@@ -112,7 +112,7 @@ function openLogin() {
 }
 
 //編輯頁面開啟或關閉
-function editOn() {
+function editSwitch() {
   $("#pageFront").toggleClass("pageFrontToggle");
   $("#pageBack").toggleClass("pageBackToggle");
   toPageBack();
