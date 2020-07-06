@@ -13,15 +13,15 @@ $Ps = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-  <div class="editP">
-    <table>
+  <div id="editP" class="editP editP_Open">
+    <table class="tableP">
       <tr>
-        <td>Photo</td>
-        <td>Title</td>
-        <td>URL</td>
-        <td>Note</td>
-        <td>Display</td>
-        <td>Delete</td>
+        <th>Photo</th>
+        <th>Title</th>
+        <th>URL</th>
+        <th>Note</th>
+        <th>Display</th>
+        <th>Delete</th>
       </tr>
       <?php
       foreach ($Ps as $P) {
@@ -80,6 +80,7 @@ $Ps = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
       <input type="submit" value="上傳">
     </form>
   </div>
+  <div id="pSwitch" class="pSwitch" onclick="pSwitch()"><i class="fas fa-edit fa-3x"></i></div>
   <script src="js/back.js"></script>
 </body>
 

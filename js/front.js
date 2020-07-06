@@ -100,7 +100,6 @@ function openLogin() {
 function editSwitch() {
   $("#pageFront").toggleClass("pageFrontToggle");
   $("#pageBack").toggleClass("pageBackToggle");
-  $("#addP").style.display = "none";
   $.getScript("js/back.js");
   // toPageBack();
 }

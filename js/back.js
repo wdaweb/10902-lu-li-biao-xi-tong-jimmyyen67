@@ -83,6 +83,7 @@ $(document).ready(function (e) {
       cache: false,
       processData: false,
       success: function (data) {
+        console.log(data);
         toBackP();
       },
       error: function (e) {
@@ -92,3 +93,8 @@ $(document).ready(function (e) {
     });
   });
 });
+
+function pSwitch() {
+  $("#editP").toggleClass("editP_Open");
+  $("#addP").toggleClass("addP_Open");
+}

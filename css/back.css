@@ -58,15 +58,38 @@
 }
 
 /* 後台：作品集 */
+.pSwitch {
+  position: absolute;
+  cursor: pointer;
+  right: 0%;
+  top: 0%;
+}
+.pSwitch:hover{
+  transform: scale(1.05);
+}
 .editP {
   position: absolute;
   top: 0%;
-  left: 0%;
+  left: -100%;
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  transition: all 0.5s ease-in-out;
+}
+.editP_Open {
+  left: 0%;
+  transition: all 0.5s ease-in-out;
+}
+.tableP {
+  width: 85%;
+  text-align: center;
+  margin-top: 50px;
+}
+.tableP tr td,
+.tableP tr th {
+  padding: 10px;
 }
 .addP {
   position: absolute;
@@ -77,4 +100,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.addP_Open {
+  left: 0%;
+  transition: all 0.5s ease-in-out;
 }
