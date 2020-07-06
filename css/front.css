@@ -32,7 +32,7 @@ body {
   min-width: fit-content;
   display: inline-block;
 }
-#navGroup {
+.navGroup {
   display: flex;
   flex-flow: column nowrap;
   position: relative;
@@ -66,13 +66,13 @@ body {
   min-width: fit-content;
   transition: all 0.5s ease-in-out;
 }
-.home,
 .about,
 .experience,
 .skills,
-.portfolio,
+.collection,
 .contact {
-  margin: auto;
+  height: 100%;
+  width: 100%;
 }
 .infoPic {
   border-radius: 50%;
@@ -257,7 +257,4 @@ body {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   border: 2px solid #ffffff;
-}
-.noborder {
-  border-style: none !important;
 }

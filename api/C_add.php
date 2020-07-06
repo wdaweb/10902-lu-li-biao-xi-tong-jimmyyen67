@@ -13,7 +13,7 @@ $filename =  $_FILES['fileP']['name'];
 
 move_uploaded_file($_FILES['fileP']['tmp_name'], "../images/" . $_FILES['fileP']['name']);
 
-$sql = "INSERT INTO portfolio (
+$sql = "INSERT INTO collection (
   `title`,
   `img`,
   `note1`,

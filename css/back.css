@@ -58,13 +58,13 @@
 }
 
 /* 後台：作品集 */
-.pSwitch {
+.cSwitch {
   position: absolute;
   cursor: pointer;
   right: 0%;
   top: 0%;
 }
-.pSwitch:hover{
+.cSwitch:hover{
   transform: scale(1.05);
 }
 .editP {
@@ -105,4 +105,8 @@
 .addP_Open {
   left: 0%;
   transition: all 0.5s ease-in-out;
+}
+.deleteP:hover{
+  cursor:pointer;
+  transform: scale(1.1);
 }
