@@ -8,8 +8,8 @@ $note2 =  $_POST['noteP2'];
 $note3 =  $_POST['noteP3'];
 $filename =  $_FILES['fileP']['name'];
 
-// print_r($_POST);
-// print_r($_FILES);
+print_r($_POST);
+print_r($_FILES);
 
 move_uploaded_file($_FILES['fileP']['tmp_name'], "../images/" . $_FILES['fileP']['name']);
 

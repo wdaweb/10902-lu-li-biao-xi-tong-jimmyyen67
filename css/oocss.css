@@ -28,3 +28,12 @@
 .t-center{
   text-align: center;
 }
+.float-r{
+  float: right;
+}
+.float-l{
+  float: left;
+}
+.p-5{
+  padding: 5px;
+}
