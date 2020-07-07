@@ -1,6 +1,6 @@
   <?php
   include_once "../backend/base.php";
-  $sql = "SELECT * FROM collection";
+  $sql = "SELECT * FROM collection WHERE `sh`=1";
   $Ps = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
   ?>
 

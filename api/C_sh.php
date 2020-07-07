@@ -10,3 +10,4 @@ if ($S['sh'] == 1) {
   $sql = "UPDATE collection SET `sh`='1' WHERE `id`='$id'";
 }
 $pdo->exec($sql);
+?>

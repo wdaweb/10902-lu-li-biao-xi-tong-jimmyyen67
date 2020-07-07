@@ -66,7 +66,7 @@ $Ps = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
               <option value="PHP">PHP</option>
             </select><br>
           </td>
-          <td><i class="far fa-save fa-2x editC" onclick="updateC(<?= $P['id'] ?>)"></i></td>
+          <td><i class="far fa-save editC" onclick="updateC(<?= $P['id'] ?>)"></i></td>
           <td>
             <label for="">
               <input id="shCheck<?= $P['id'] ?>" type="checkbox" name="sh[]" onclick="showC(<?= $P['id'] ?>)" <?= $checked ?>>
@@ -74,7 +74,7 @@ $Ps = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
             </label>
           </td>
           <td>
-            <div id="deleteP<?= $P['id'] ?>" class="deleteP" onclick="deleteC(<?= $P['id'] ?>)"><i class="fas fa-trash-alt fa-2x"></i></div>
+            <div id="deleteP<?= $P['id'] ?>" class="deleteP" onclick="deleteC(<?= $P['id'] ?>)"><i class="fas fa-trash-alt"></i></div>
           </td>
         </tr>
       <?php

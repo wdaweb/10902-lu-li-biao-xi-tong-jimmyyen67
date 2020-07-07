@@ -111,7 +111,8 @@
   left: 0%;
   transition: all 0.5s ease-in-out;
 }
-.deleteP:hover {
+.deleteP:hover,
+.deleteBio:hover {
   cursor: pointer;
   transform: scale(1.2);
 }
@@ -154,4 +155,18 @@ input[type="checkbox"]:checked ~ .shSwitch {
 input[type="checkbox"]:checked ~ .shSwitch::before {
   transform: translateX(20px);
   transition-delay: 0.5s;
+}
+.editBio tr td {
+  padding: 5px;
+}
+.showBioText {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 500px;
+  height: 500px;
+  text-overflow: ellipsis;
+  background: #555;
+  word-wrap:break-word;
 }

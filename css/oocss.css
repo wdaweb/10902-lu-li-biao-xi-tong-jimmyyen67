@@ -1,6 +1,9 @@
 .mt-10 {
   margin-top: 10px;
 }
+.mt-30 {
+  margin-top: 30px;
+}
 .mb-10 {
   margin-bottom: 10px;
 }
@@ -9,6 +12,9 @@
 }
 .mb-30 {
   margin-bottom: 30px;
+}
+.p-5 {
+  padding: 5px;
 }
 .tcent {
   text-align: center;
@@ -28,7 +34,7 @@
 .f-direction-c {
   flex-direction: column;
 }
-.wrap{
+.wrap {
   flex-wrap: wrap;
 }
 .t-center {
