@@ -1,10 +1,10 @@
-.mt-10{
+.mt-10 {
   margin-top: 10px;
 }
-.mb-10{
+.mb-10 {
   margin-bottom: 10px;
 }
-.mb-20{
+.mb-20 {
   margin-bottom: 20px;
 }
 .mb-30 {
@@ -16,24 +16,42 @@
 .tright {
   text-align: right;
 }
-.d-flex{
-  display:flex;
+.d-flex {
+  display: flex;
 }
-.j-center{
+.j-center {
   justify-content: center;
 }
-.a-center{
+.a-center {
   align-items: center;
 }
-.t-center{
+.f-direction-c {
+  flex-direction: column;
+}
+.wrap{
+  flex-wrap: wrap;
+}
+.t-center {
   text-align: center;
 }
-.float-r{
+.t-right {
+  text-align: right;
+}
+.float-r {
   float: right;
 }
-.float-l{
+.float-l {
   float: left;
 }
-.p-5{
+.p-5 {
   padding: 5px;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
 }
