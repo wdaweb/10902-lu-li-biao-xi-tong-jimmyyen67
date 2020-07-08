@@ -2,8 +2,8 @@ var backMain = $("#backMain");
 var back_A = $("#back_about");
 var back_E = $("#back_experience");
 var back_B = $("#back_autobio");
-var back_P = $("#back_collection");
-var back_C = $("#back_contact");
+var back_P = $("#back_Rollection");
+var back_R = $("#back_require");
 
 function toBackA() {
   $.get("./backend/about.html", {}, function (res) {
@@ -11,7 +11,7 @@ function toBackA() {
     back_E.removeClass("back_focused");
     back_B.removeClass("back_focused");
     back_P.removeClass("back_focused");
-    back_C.removeClass("back_focused");
+    back_R.removeClass("back_focused");
     $.get("./backend/about.php", { res }, function (display) {
       backMain.html(display);
     });
@@ -23,7 +23,7 @@ function toBackE() {
     back_E.addClass("back_focused");
     back_B.removeClass("back_focused");
     back_P.removeClass("back_focused");
-    back_C.removeClass("back_focused");
+    back_R.removeClass("back_focused");
     $.get("./backend/experience.php", { res }, function (display) {
       backMain.html(display);
     });
@@ -35,7 +35,7 @@ function toBackB() {
     back_E.removeClass("back_focused");
     back_B.addClass("back_focused");
     back_P.removeClass("back_focused");
-    back_C.removeClass("back_focused");
+    back_R.removeClass("back_focused");
     $.get("./backend/autobio.php", { res }, function (display) {
       backMain.html(display);
     });
@@ -47,21 +47,21 @@ function toBackP() {
     back_E.removeClass("back_focused");
     back_B.removeClass("back_focused");
     back_P.addClass("back_focused");
-    back_C.removeClass("back_focused");
+    back_R.removeClass("back_focused");
     $.get("./backend/collection.php", { res }, function (display) {
       backMain.html(display);
     });
   });
 }
 
-function toBackC() {
-  $.get("./backend/contact.html", {}, function (res) {
+function toBackR() {
+  $.get("./backend/require.html", {}, function (res) {
     back_A.removeClass("back_focused");
     back_E.removeClass("back_focused");
     back_B.removeClass("back_focused");
     back_P.removeClass("back_focused");
-    back_C.addClass("back_focused");
-    $.get("./backend/contact.php", { res }, function (display) {
+    back_R.addClass("back_focused");
+    $.get("./backend/require.php", { res }, function (display) {
       backMain.html(display);
     });
   });
@@ -212,4 +212,70 @@ function showBioText(id) {
   let bioText = $(`#showBioText${id}`);
   // console.log(bioText);
   bioText.toggle();
+}
+
+function uploadR() {
+  let formData = new FormData();
+  let title = $("#titleR").val();
+  let itemR1 = $("#itemR1").val();
+  let itemR2 = $("#itemR2").val();
+  let itemR3 = $("#itemR3").val();
+  let itemR4 = $("#itemR4").val();
+  let itemR5 = $("#itemR5").val();
+  formData.append("title", title);
+  formData.append("itemR1", itemR1);
+  formData.append("itemR2", itemR2);
+  formData.append("itemR3", itemR3);
+  formData.append("itemR4", itemR4);
+  formData.append("itemR5", itemR5);
+  $.ajax({
+    url: "api/R_add.php",
+    data: formData,
+    type: "POST",
+    contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+    processData: false, // NEEDED, DON'T OMIT THIS
+    // ... Other options like success and etc
+    success: function (data) {
+      console.log(data);
+      toBackR();
+    },
+    error: function (e) {
+      alert("Insert Failed");
+      toBackR();
+    },
+  });
+}
+function showR(id) {
+  console.log(id);
+  $.post("api/R_sh.php", { id }, function (res) {
+    console.log(res);
+    toBackR();
+  });
+}
+function updateR(id) {
+  let updateR = $(`#updateR${id}`).val();
+  $.post("api/R_update.php", { id, updateR }, function (res) {
+    console.log(res);
+    toBackR();
+  });
+}
+function uploadR(id) {
+  let upload = $(`#uploadR${id}`).val();
+  console.log(upload);
+  console.log(id);
+  $.post("api/R_upload.php", { id, upload }, function (res) {
+    console.log(res);
+    toBackR();
+  })
+}
+function deleteR(id) {
+  $.post("api/R_del.php", { id }, function (res) {
+    console.log(res);
+    toBackR();
+  });
+}
+function showR(id) {
+  $.post("api/R_sh.php", { id }, function (res) {
+    toBackR();
+  });
 }

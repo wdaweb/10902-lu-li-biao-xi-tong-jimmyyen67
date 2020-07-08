@@ -2,7 +2,7 @@ var li_home = document.querySelector("#li_home");
 var li_about = document.querySelector("#li_about");
 var li_autobio = document.querySelector("#li_autobio");
 var li_collection = document.querySelector("#li_collection");
-var li_condition = document.querySelector("#li_condition");
+var li_require = document.querySelector("#li_require");
 var li_login = document.querySelector("#li_login");
 var main = document.querySelector("#main");
 var pageBack = document.querySelector("#pageBack");
@@ -16,7 +16,7 @@ function toPageA() {
     li_experience.classList.remove("li_focused");
     li_autobio.classList.remove("li_focused");
     li_collection.classList.remove("li_focused");
-    li_condition.classList.remove("li_focused");
+    li_require.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
     $.get("./frontend/about.php", { res }, function (display) {
       main.innerHTML = display;
@@ -29,7 +29,7 @@ function toPageE() {
     li_experience.classList.add("li_focused");
     li_autobio.classList.remove("li_focused");
     li_collection.classList.remove("li_focused");
-    li_condition.classList.remove("li_focused");
+    li_require.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
     $.get("./frontend/experience.php", { res }, function (display) {
       main.innerHTML = display;
@@ -42,7 +42,7 @@ function toPageB() {
     li_experience.classList.remove("li_focused");
     li_autobio.classList.add("li_focused");
     li_collection.classList.remove("li_focused");
-    li_condition.classList.remove("li_focused");
+    li_require.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
     $.get("./frontend/autobio.php", { res }, function (display) {
       main.innerHTML = display;
@@ -55,7 +55,7 @@ function toPageP() {
     li_experience.classList.remove("li_focused");
     li_autobio.classList.remove("li_focused");
     li_collection.classList.add("li_focused");
-    li_condition.classList.remove("li_focused");
+    li_require.classList.remove("li_focused");
     li_login.classList.remove("li_focused");
     $.get("./frontend/collection.php", { res }, function (display) {
       main.innerHTML = display;
@@ -63,15 +63,15 @@ function toPageP() {
   });
 }
 
-function toPageC() {
-  $.get("./frontend/condition.html", {}, function (res) {
+function toPageR() {
+  $.get("./frontend/require.html", {}, function (res) {
     li_about.classList.remove("li_focused");
     li_experience.classList.remove("li_focused");
     li_autobio.classList.remove("li_focused");
     li_collection.classList.remove("li_focused");
-    li_condition.classList.add("li_focused");
+    li_require.classList.add("li_focused");
     li_login.classList.remove("li_focused");
-    $.get("./frontend/condition.php", { res }, function (display) {
+    $.get("./frontend/require.php", { res }, function (display) {
       main.innerHTML = display;
     });
   });

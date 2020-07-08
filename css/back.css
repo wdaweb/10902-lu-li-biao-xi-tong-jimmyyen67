@@ -120,42 +120,6 @@
   cursor: pointer;
   transform: scale(1.2);
 }
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  visibility: hidden;
-  display: none;
-}
-.shSwitch {
-  position: relative;
-  display: block;
-  margin: auto;
-  width: 40px;
-  height: 20px;
-  background: #ecf0f1;
-  cursor: pointer;
-  border-radius: 20px;
-  overflow: hidden;
-  transition-delay: 0.5s;
-}
-input[type="checkbox"]:checked ~ .shSwitch {
-  background: #2ecc71;
-  transition-delay: 0.5s;
-}
-.shSwitch::before {
-  content: "";
-  background: #2c3e50;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  transition-delay: 0.5s;
-}
-input[type="checkbox"]:checked ~ .shSwitch::before {
-  transform: translateX(20px);
-  transition-delay: 0.5s;
-}
 .editBio tr td {
   padding: 5px;
 }
@@ -168,5 +132,10 @@ input[type="checkbox"]:checked ~ .shSwitch::before {
   height: 500px;
   text-overflow: ellipsis;
   background: #555;
+  color: white;
   word-wrap:break-word;
+}
+.fas:hover{
+  transform: scale(1.1);
+  cursor:pointer;
 }

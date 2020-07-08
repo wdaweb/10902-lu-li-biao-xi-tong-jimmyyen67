@@ -68,10 +68,7 @@ $Ps = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
           </td>
           <td><i class="far fa-save editC" onclick="updateC(<?= $P['id'] ?>)"></i></td>
           <td>
-            <label for="">
               <input id="shCheck<?= $P['id'] ?>" type="checkbox" name="sh[]" onclick="showC(<?= $P['id'] ?>)" <?= $checked ?>>
-              <span for="sh[]" id="shSwitch" class="shSwitch" onclick="shCheck(<?= $P['id'] ?>)"></span>
-            </label>
           </td>
           <td>
             <div id="deleteP<?= $P['id'] ?>" class="deleteP" onclick="deleteC(<?= $P['id'] ?>)"><i class="fas fa-trash-alt"></i></div>
