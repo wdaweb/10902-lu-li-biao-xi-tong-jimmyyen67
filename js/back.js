@@ -202,6 +202,13 @@ function showBio(id) {
     toBackB();
   });
 }
+function updateBio(id) {
+  let text = $(`#updateBio${id}`).val();
+  $.post("api/B_update.php", { id, text }, function (res) {
+    console.log(res);
+    toBackB();
+  });
+}
 function deleteBio(id) {
   $.post("api/B_del.php", { id }, function (res) {
     console.log(res);
@@ -266,7 +273,7 @@ function uploadR(id) {
   $.post("api/R_upload.php", { id, upload }, function (res) {
     console.log(res);
     toBackR();
-  })
+  });
 }
 function deleteR(id) {
   $.post("api/R_del.php", { id }, function (res) {
@@ -277,5 +284,84 @@ function deleteR(id) {
 function showR(id) {
   $.post("api/R_sh.php", { id }, function (res) {
     toBackR();
+  });
+}
+
+function addE() {
+  let formData = new FormData();
+  let works = $("#works").val();
+  let nameE = $("#nameE").val();
+  let itemE = $("#itemE").val();
+  let dateIn = $("#dateIn").val();
+  let dateOut = $("#dateOut").val();
+  $.post("api/E_add.php", { works, nameE, itemE, dateIn, dateOut }, function (
+    res
+  ) {
+    console.log(res);
+    toBackE();
+  });
+}
+function updateE(id) {
+  let formData = new FormData();
+  let nameE = $("#editNameE").val();
+  let itemE = $("#editItemE").val();
+  let dateIn = $("#editDateIn").val();
+  let dateOut = $("#editDateOut").val();
+  $.post("api/E_update.php", { id, nameE, itemE, dateIn, dateOut }, function (
+    res
+  ) {
+    console.log(res);
+    toBackE();
+  });
+}
+function deleteE(id) {
+  $.post("api/E_del.php", { id }, function (res) {
+    console.log(res);
+    toBackE();
+  });
+}
+function displayE(id) {
+  $.post("api/E_sh.php", { id }, function (res) {
+    toBackE();
+  });
+}
+function updateA(id) {
+  let formData = new FormData();
+  let name = $("#nameA").val();
+  let ename = $("#enameA").val();
+  let birthday = $("#birthdayA").val();
+  let tel = $("#telA").val();
+  let line = $("#lineA").val();
+  let email = $("#emailA").val();
+  let file = $("#fileA")[0].files[0];
+  formData.append("id", id);
+  formData.append("name", name);
+  formData.append("ename", ename);
+  formData.append("birthday", birthday);
+  formData.append("tel", tel);
+  formData.append("line", line);
+  formData.append("email", email);
+  formData.append("file", file);
+  $.ajax({
+    url: "api/A_update.php",
+    data: formData,
+    type: "POST",
+    contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+    processData: false, // NEEDED, DON'T OMIT THIS
+    // ... Other options like success and etc
+    success: function (data) {
+      console.log(data);
+      toBackA();
+    },
+    error: function (e) {
+      alert("Insert Failed");
+      toBackA();
+    },
+  });
+}
+function A_img(id) {
+  $.post("api/A_img.php", { id }, function (res) {
+    console.log(res);
+    toBackA();
   });
 }

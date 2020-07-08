@@ -34,9 +34,9 @@ $Bs = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
           <td>
             <i class="previewBio fas fa-search" onclick="showBioText(<?= $B['id'] ?>)"></i>
             <div id="showBioText<?= $B['id'] ?>" class="showBioText">
-              <pre><span style="word-break: break-all;"><?= $B['text'] ?></span></pre>
+        <textarea type="textarea" id="updateBio<?=$B['id']?>" name="textBio" class="mt-10" style="width:500px; height:500px;"  required><?=$B['text']?></textarea>
               <div style="float:right;position:ralative;bottom:0%;">
-                <button>更新</button>
+                <button onclick="updateBio(<?= $B['id'] ?>)">更新</button>
                 <button onclick="showBioText(<?= $B['id'] ?>)">關閉</button>
               </div>
           </td>
@@ -57,7 +57,9 @@ $Bs = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
       <!-- <form action="api/B_add.php" method="post" enctype="multipart/form-data" id="uploadFormBio"> -->
       <label for="titleBio">標題：</label>
       <input type="text" id="titleBio" name="titleBio" class="mt-10">
-      <pre></pre><textarea type="textarea" id="textBio" name="textBio" class="mt-10" style="width:500px; height:500px;" required></textarea><br>
+      <pre>
+        <textarea type="textarea" id="textBio" name="textBio" class="mt-10" style="width:500px; height:500px;" required></textarea>
+      </pre>
       <button onclick="uploadBio()">Upload</button>
       <!-- <input type="submit" value="上傳"> -->
       <!-- </form> -->
