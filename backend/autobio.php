@@ -32,8 +32,13 @@ $Bs = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         <tr>
           <td><?= $B['title'] ?></td>
           <td>
-            <i class="previewBio fas fa-search" onmouseover="showBioText(<?= $B['id'] ?>)" onmouseout="showBioText(<?= $B['id'] ?>)"></i>
-            <pre><div id="showBioText<?= $B['id'] ?>" class="showBioText"><span style="word-break: break-all;"><?= $B['text'] ?></span></div></pre>
+            <i class="previewBio fas fa-search" onclick="showBioText(<?= $B['id'] ?>)"></i>
+            <div id="showBioText<?= $B['id'] ?>" class="showBioText">
+              <pre><span style="word-break: break-all;"><?= $B['text'] ?></span></pre>
+              <div style="float:right;position:ralative;bottom:0%;">
+                <button>更新</button>
+                <button onclick="showBioText(<?= $B['id'] ?>)">關閉</button>
+              </div>
           </td>
           <td> <label for="">
               <input type="radio" name="sh" onchange="showBio(<?= $B['id'] ?>)" <?= $checked ?>>
@@ -48,7 +53,7 @@ $Bs = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
       }
       ?>
     </table>
-    <div id="addB" class="addB d-flex j-center a-center">
+    <div id="addB" class="addB d-flex j-center a-center f-direction-c">
       <!-- <form action="api/B_add.php" method="post" enctype="multipart/form-data" id="uploadFormBio"> -->
       <label for="titleBio">標題：</label>
       <input type="text" id="titleBio" name="titleBio" class="mt-10">

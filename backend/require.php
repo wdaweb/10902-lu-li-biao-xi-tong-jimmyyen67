@@ -49,7 +49,7 @@ $titles = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     <input type="text" id="itemR3" class="mt-10"><br>
     <input type="text" id="itemR4" class="mt-10"><br>
     <input type="text" id="itemR5" class="mt-10"><br>
-    <button onclick="uploadR()">Upload</button>
+    <button onclick="addR()">Upload</button>
     <!-- <input type="submit" value="上傳"> -->
     <!-- </form> -->
   </div>

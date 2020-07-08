@@ -40,6 +40,8 @@ body {
 .navBar {
   text-align: left;
   height: fit-content;
+  min-width: fit-content;
+  width: 13rem;
   list-style: none;
   background: rgba(255, 255, 255, 1);
   padding: 10px 10px 10px 10px;
@@ -239,9 +241,8 @@ body {
 }
 .editOn {
   position: fixed;
-  left: 50%;
+  left: 40%;
   bottom: 0.3vh;
-  transform-origin: translateX(-50%);
   padding: 5px 20px;
   border: 2px solid #3d3d3d;
   background: white;

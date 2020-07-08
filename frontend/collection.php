@@ -5,7 +5,7 @@
   ?>
 
   <div class="collection">
-    <h1 class="t-center">Collection</h1>
+    <h1 class="t-center">作品集</h1>
     <div class="collectionDiv d-flex wrap">
       <?php
       foreach ($Ps as $P) {

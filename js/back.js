@@ -211,10 +211,10 @@ function deleteBio(id) {
 function showBioText(id) {
   let bioText = $(`#showBioText${id}`);
   // console.log(bioText);
-  bioText.toggle();
+  bioText.fadeToggle(300);
 }
 
-function uploadR() {
+function addR() {
   let formData = new FormData();
   let title = $("#titleR").val();
   let itemR1 = $("#itemR1").val();

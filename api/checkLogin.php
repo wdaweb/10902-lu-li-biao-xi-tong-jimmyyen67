@@ -17,7 +17,6 @@ if (empty($_SESSION) || $_SESSION['login'] == 0) {
   if ($user) {
     // echo "1"; 測試讀取帳號成功
     $_SESSION['login'] = 1;
-    echo $_SESSION['login'];
     header("location:../index.html");
   } else {
     // echo "0"; 測試讀取帳號失敗
