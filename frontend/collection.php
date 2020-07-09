@@ -1,3 +1,80 @@
+  <style>
+    .collectionDiv {
+      height: fit-content;
+      flex-flow: row wrap;
+    }
+
+    .collections {
+      position: relative;
+      display: grid;
+      min-width: 40%;
+      width: 250px;
+      height: 150px;
+      margin: 20px;
+      border: 2px solid #111;
+      padding: 10px;
+      ;
+    }
+
+    .collections img {
+      position: absolute;
+      top: -10%;
+      right: 3%;
+      height: 100px;
+      width: 100px;
+      border: 3px solid #333;
+    }
+
+    .collections a {
+      position: absolute;
+      right: 5%;
+      bottom: 5%;
+      text-decoration: none;
+      animation: toDemo 2s ease-in-out infinite;
+    }
+
+    @keyframes toDemo {
+
+      from,
+      to {
+        right: 5%;
+      }
+
+      50% {
+        right: 2%;
+      }
+    }
+
+    .collections h5 {
+      width: fit-content;
+      padding: 4px;
+      background: #009432;
+      margin: 3px;
+      border-radius: 10%;
+      color: #ffffff;
+    }
+
+    a:active {
+      text-decoration: none;
+      color: #111;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: #111;
+    }
+
+    a:hover {
+      font-weight: bold;
+      text-decoration: none;
+      color: #111;
+    }
+
+    a:active {
+      text-decoration: none;
+      color: #111;
+    }
+  </style>
   <?php
   include_once "../backend/base.php";
   $sql = "SELECT * FROM collection WHERE `sh`=1";
@@ -12,11 +89,11 @@
       ?>
         <div class="collections relative">
           <img src="images/<?= $P['img'] ?>" alt="">
-          <span><?= $P['title'] ?></span>
-          <span><?= $P['url'] ?></span>
-          <span><?= $P['note1'] ?></span>
-          <span><?= $P['note2'] ?></span>
-          <span><?= $P['note3'] ?></span>
+          <h3><?= $P['title'] ?></h3>
+          <a href="<?= $P['url'] ?>" target="_blank">點擊前往<i class="fas fa-forward"></i></a>
+          <h5 class=""><?= $P['note1'] ?></h5>
+          <h5 class=""><?= $P['note2'] ?></h5>
+          <h5 class=""><?= $P['note3'] ?></h5>
         </div>
       <?php
       }

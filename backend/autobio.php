@@ -49,7 +49,7 @@ $Bs = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
       word-wrap: break-word;
     }
 
-    button {
+    .showBioText button {
       padding: 10px 20px;
       font-size: large;
     }
