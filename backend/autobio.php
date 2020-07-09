@@ -43,13 +43,29 @@ $Bs = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 400px;
-      height: 600px;
+      width: 500px;
+      height: 700px;
       text-overflow: auto;
       word-wrap: break-word;
     }
-    .showBioText button{
+
+    button {
       padding: 10px 20px;
+      font-size: large;
+    }
+
+    .bioTextBackground {
+      display: none;
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      background: #44444477;
+    }
+
+    .addB button {
+      margin-left: auto;
     }
   </style>
 </head>
@@ -84,6 +100,7 @@ $Bs = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
             <div class="deleteBio" onclick="deleteBio(<?= $B['id'] ?>)"><i class="fas fa-trash-alt"></i></div>
           </td>
         </tr>
+        <div id="bioTextBackground<?= $B['id'] ?>" class="bioTextBackground" onclick="showBioText(<?= $B['id'] ?>)"></div>
         <div id="showBioText<?= $B['id'] ?>" class="showBioText">
           <textarea type="textarea" id="updateBio<?= $B['id'] ?>" name="textBio" class="mt-10" style="width:100%; height:100%;" required><?= $B['text'] ?></textarea>
           <div style="float:right;position:ralative;bottom:0%;">

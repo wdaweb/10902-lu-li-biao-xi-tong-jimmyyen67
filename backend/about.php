@@ -31,11 +31,13 @@
     flex-flow: column wrap;
     transform: translate(-50%, 0%);
   }
-.aboutPics{
-  text-align: center;
-  margin: 5px;
-  margin-top: 15px;
-}
+
+  .aboutPics {
+    text-align: center;
+    margin: 5px;
+    margin-top: 15px;
+  }
+
   li i {
     border: 2px solid #333;
     padding: 5px;
@@ -58,13 +60,14 @@ $A = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     <li>照片：<input type="file" id="fileA"></li>
   </ul>
   <div class="aboutPics">
-    <h4 class="">歷史照片</h4>
+    <h4 class="">照片選擇：</h4>
     <?php
     $sql = "SELECT * FROM images";
     $Imgs = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     foreach ($Imgs as $Img) {
+      $borderRed = ($Img['img'] == $A['img']) ? "#c0392b" : "";
     ?>
-      <img src="images/<?= $Img['img'] ?>" height="100px" width="100px" class="imgBio" onclick="A_img(<?= $Img['id'] ?>)">
+      <img src="images/<?= $Img['img'] ?>" height="100px" width="100px" class="imgBio" style="border:5px solid <?=$borderRed?>;" onclick="A_img(<?= $Img['id'] ?>)">
 
     <?php
     }

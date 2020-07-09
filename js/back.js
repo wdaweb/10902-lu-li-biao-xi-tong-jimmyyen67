@@ -217,7 +217,9 @@ function deleteBio(id) {
 }
 function showBioText(id) {
   let bioText = $(`#showBioText${id}`);
+  let bioTextBackground = $(`#bioTextBackground${id}`);
   // console.log(bioText);
+  bioTextBackground.fadeToggle(300);
   bioText.fadeToggle(300);
 }
 

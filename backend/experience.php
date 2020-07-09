@@ -17,8 +17,11 @@
     height: 95%;
     width: 3px;
     background-color: #333;
-    margin-left: 2%;
-    margin-right: 5%;
+    margin-left: 1%;
+    margin-right: 4%;
+  }
+  input{
+    padding: 5px 10px;
   }
 </style>
 <?php
