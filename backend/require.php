@@ -38,7 +38,7 @@ $titles = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-<div style="float:right; margin-right:10px;">
+<div style="margin-right:10px;position:absolute;top:0%;right:0%;">
   <div id="addR" class="addR d-flex f-direction-c j-center a-center">
     <!-- <form action="api/B_add.php" method="post" enctype="multipart/form-data" id="uploadFormBio"> -->
     <label class="mt-30">新增條件：</label>

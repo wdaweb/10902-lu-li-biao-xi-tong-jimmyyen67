@@ -25,7 +25,7 @@ if (empty($_SESSION['login'])) {
   <div id="loginBurger" class="noborder" onclick="logout()">
     <span><i class="fas fa-sign-out-alt"></i></span>
   </div>
-  <button id="editOn" onclick="editSwitch()" class="editOn">Back Stage</button>
+  <button id="editOn" onclick="editSwitch()" class="editOn">-後-台-管-理-</button>
 <?php
 }
 ?>
