@@ -122,21 +122,7 @@
   cursor: pointer;
   transform: scale(1.2);
 }
-.editBio tr td {
-  padding: 5px;
-}
-.showBioText {
-  display: none;
-  position: fixed;
-  top: 10%;
-  left: 10%;
-  width: 500px;
-  height: 500px;
-  text-overflow: ellipsis;
-  background: #555;
-  color: white;
-  word-wrap: break-word;
-}
+
 .fas:hover {
   transform: scale(1.1);
   cursor: pointer;

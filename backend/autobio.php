@@ -10,20 +10,62 @@ $Bs = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .back_Autobio {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    input {
+      padding: 5px;
+    }
+
+    textarea {
+      padding: 10px;
+      appearance: none;
+    }
+
+    th {
+      padding: 10px;
+    }
+
+    td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .showBioText {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 600px;
+      text-overflow: auto;
+      word-wrap: break-word;
+    }
+    .showBioText button{
+      padding: 10px 20px;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="d-flex j-center a-center">
+  <div class="back_Autobio">
     <table class="editBio">
       <tr>
-        <td>標題</td>
-        <td>預覽</td>
-        <td>
+        <th>標題</th>
+        <th>預覽</th>
+        <th>
           Display
-        </td>
-        <td>
+        </th>
+        <th>
           Del
-        </td>
+        </th>
       </tr>
       <?php
       foreach ($Bs as $B) {
@@ -33,12 +75,7 @@ $Bs = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
           <td><?= $B['title'] ?></td>
           <td>
             <i class="previewBio fas fa-search" onclick="showBioText(<?= $B['id'] ?>)"></i>
-            <div id="showBioText<?= $B['id'] ?>" class="showBioText">
-        <textarea type="textarea" id="updateBio<?=$B['id']?>" name="textBio" class="mt-10" style="width:500px; height:500px;"  required><?=$B['text']?></textarea>
-              <div style="float:right;position:ralative;bottom:0%;">
-                <button onclick="updateBio(<?= $B['id'] ?>)">更新</button>
-                <button onclick="showBioText(<?= $B['id'] ?>)">關閉</button>
-              </div>
+
           </td>
           <td> <label for="">
               <input type="radio" name="sh" onchange="showBio(<?= $B['id'] ?>)" <?= $checked ?>>
@@ -47,7 +84,13 @@ $Bs = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
             <div class="deleteBio" onclick="deleteBio(<?= $B['id'] ?>)"><i class="fas fa-trash-alt"></i></div>
           </td>
         </tr>
-
+        <div id="showBioText<?= $B['id'] ?>" class="showBioText">
+          <textarea type="textarea" id="updateBio<?= $B['id'] ?>" name="textBio" class="mt-10" style="width:100%; height:100%;" required><?= $B['text'] ?></textarea>
+          <div style="float:right;position:ralative;bottom:0%;">
+            <button onclick="updateBio(<?= $B['id'] ?>)">更新</button>
+            <button onclick="showBioText(<?= $B['id'] ?>)">關閉</button>
+          </div>
+        </div>
 
       <?php
       }
