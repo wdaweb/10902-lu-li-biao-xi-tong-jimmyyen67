@@ -12,7 +12,9 @@
       height: 150px;
       margin: 20px;
       border: 2px solid #111;
+      border-radius: 10px;
       padding: 10px;
+      box-shadow: 2px 2px 5px #57606f;
       ;
     }
 
@@ -22,13 +24,23 @@
       right: 3%;
       height: 100px;
       width: 100px;
-      border: 3px solid #333;
+      border: 3px solid #a4b0be;
+      z-index: 10;
+      box-shadow: 5px 5px 5px #747d8c;
+      transition: all .5s ease-in-out;
+    }
+
+    .collections img:hover {
+      transform: scale(4);
+      transition: all .5s ease-in-out;
+      z-index: 10;
     }
 
     .collections a {
       position: absolute;
       right: 5%;
       bottom: 5%;
+      padding: 3px;
       text-decoration: none;
       animation: toDemo 2s ease-in-out infinite;
     }
