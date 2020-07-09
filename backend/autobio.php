@@ -43,8 +43,8 @@ $Bs = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 500px;
-      height: 700px;
+      width: 400px;
+      height: 500px;
       text-overflow: auto;
       word-wrap: break-word;
     }

@@ -31,7 +31,7 @@
     }
 
     .collections img:hover {
-      transform: scale(4);
+      transform: scale(2);
       transition: all .5s ease-in-out;
       z-index: 10;
     }
