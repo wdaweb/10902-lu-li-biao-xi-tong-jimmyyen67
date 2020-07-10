@@ -33,7 +33,7 @@
     .collections img:hover {
       transform: scale(4);
       transition: all .5s ease-in-out;
-      z-index: 10;
+      z-index: 11;
     }
 
     .collections a {
