@@ -4,6 +4,14 @@
     justify-content: center;
 
   }
+  ul li{
+    list-style: none;
+  }
+  .schoolEx,
+  .workEx{
+    margin: 20px;
+    padding: 10px;
+  }
 </style>
 <?php
 include_once "../backend/base.php";
@@ -15,7 +23,7 @@ $W = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 <div class="experience  d-flex a-center f-direction-c">
   <h1>Experience</h1>
   <div class="contentEx">
-    <div>
+    <div class="schoolEx">
       <h3>學歷</h3>
       <ul>
         <?php
@@ -30,7 +38,7 @@ $W = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         ?>
       </ul>
     </div>
-    <div>
+    <div class="workEx">
       <h3>工作經歷</h3>
       <ul>
         <?php
